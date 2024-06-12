@@ -1,12 +1,20 @@
 <template>
-  <!-- <SignInForm /> -->
-  <router-link to="/">Home</router-link>
-  <router-link to="/about">About</router-link>
-  <router-view />
+  <div class="home">
+    <h1>Home</h1>
+  </div>
 </template>
 
+<script>
+export default {
+  name: "HomeComponent",
+  data() {
+    return {};
+  },
+};
+</script>
+
 <style>
-#app {
+.home {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

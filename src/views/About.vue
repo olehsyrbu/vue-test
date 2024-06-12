@@ -1,12 +1,20 @@
 <template>
-  <!-- <SignInForm /> -->
-  <router-link to="/">Home</router-link>
-  <router-link to="/about">About</router-link>
-  <router-view />
+  <div class="About">
+    <h1>About</h1>
+  </div>
 </template>
 
+<script>
+export default {
+  name: "AboutComponent",
+  data() {
+    return {};
+  },
+};
+</script>
+
 <style>
-#app {
+.About {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
