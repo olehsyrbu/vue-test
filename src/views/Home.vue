@@ -1,13 +1,15 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <div>name:{{ name }} - age: {{ age }}</div>
+    <div>name:{{ name }} - age: {{ age }}, {{ name2 }}</div>
+    <input type="text" v-model="name" />
+    <br />
     <button @click="change">Change</button>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed, watchEffect } from "vue";
 export default {
   name: "HomeComponent",
   setup() {
@@ -19,8 +21,17 @@ export default {
       age.value = 40;
     };
 
+    watchEffect(() => {
+      console.log("name :>>", name.value);
+    });
+
+    const name2 = computed(() => {
+      return "John";
+    });
+
     return {
       name,
+      name2,
       age,
       change,
     };
